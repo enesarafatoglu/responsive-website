@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <title>Responsive Website</title>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <i class="fa-sharp fa-solid fa-earth-americas"></i>
+            </div>
+            <ul class="links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+            <a href="#" class="start_button">Get Started</a>
+            <div class="switch_button">
+                <i class="fa-solid fa-bars fa-flip"></i>
+            </div>
+        </div>
+
+        <div class="menu_list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#" class="start_button">Get Started</a></li>
+        </div>
+    </header>
+
+    <main>
+        <section id="home">
+            <div>
+                <i class="fa-solid fa-house fa-beat" style="color: #ffffff;"></i>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br /> Eos assumenda itaque animi dolores
+                    praesentium voluptate voluptatibus, explicabo dolorem atque voluptatum?</p>
+            </div>
+        </section>
+    </main>
+
+    <div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="#">Web design</a></li>
+                            <li><a href="#">Development</a></li>
+                            <li><a href="#">Hosting</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="#">Company</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 item text">
+                        <h3>Company Name</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, earum debitis amet
+                            reiciendis quaerat sit dolorem voluptatum et architecto, eaque recusandae odit impedit quas
+                            velit nam molestiae culpa ipsam rem?</p>
+                    </div>
+                    <div class="col item social">
+                        <a href="#"><i class="icon ion-social-facebook"></i></a>
+                        <a href="#"><i class="icon ion-social-twitter"></i></a>
+                        <a href="#"><i class="icon ion-social-instagram"></i></a>
+                    </div>
+                </div>
+                <p class="copyright">Company Name ©2023</p>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+
+
+    <script>
+
+        const switchButton = document.querySelector(".switch_button");
+        const switchButtonIcon = document.querySelector(".switch_button i");
+        const menuList = document.querySelector(".menu_list");
+
+        switchButton.onclick = function () {
+            menuList.classList.toggle("active");
+            const isActive = menuList.classList.contains("active");
+
+            switchButtonIcon.classList = isActive
+                ? "fa-solid fa-xmark fa-flip"
+                : "fa-solid fa-bars fa-flip"
+        };
+
+    </script>
+</body>
+
+</html>
